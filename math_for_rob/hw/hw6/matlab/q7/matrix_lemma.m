@@ -1,0 +1,6 @@
+function output_matrix = matrix_lemma(A, B, C, D, A_inv)
+C_inv = inv(C);
+E = inv((C_inv + (D*A_inv*B)));
+output_matrix = A_inv - (A_inv*B*E*D*A_inv);
+end
+
